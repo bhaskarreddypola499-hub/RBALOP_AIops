@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RBALOP | Infrastructure Operations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">R</div>
+        <div><div class="brand-name">RBALOP</div><div class="brand-sub">INFRASTRUCTURE AI</div></div>
+      </div>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon">▦</span>Dashboard</button>
+        <div class="nav-section">MONITORING</div>
+        <button class="nav-item" data-page="isp"><span class="nav-icon">⌁</span>ISP Monitoring <span class="nav-count">2</span></button>
+        <button class="nav-item" data-page="devices"><span class="nav-icon">▣</span>Devices & Network</button>
+        <button class="nav-item" data-page="alerts"><span class="nav-icon">◉</span>Alerts & Incidents <span class="nav-count alert">3</span></button>
+        <button class="nav-item" data-page="logs"><span class="nav-icon">≡</span>System Logs</button>
+        <div class="nav-section">INTELLIGENCE</div>
+        <button class="nav-item" data-page="agents"><span class="nav-icon">✳</span>AI Agents <span class="soon">READY</span></button>
+        <button class="nav-item" data-page="automation"><span class="nav-icon">⌘</span>Automation</button>
+        <div class="nav-section">ADMINISTRATION</div>
+        <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="connection"><span class="pulse"></span><span><b>Local workspace</b><small>Frontend preview mode</small></span></div>
+        <div class="user-row"><div class="avatar">V</div><div><b>Administrator</b><small>RBALOP workspace</small></div><span class="dots">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumb">RBALOP <span>/</span> <b id="crumb">Dashboard</b></div>
+        <div class="top-actions"><span class="environment"><i></i> LOCAL ENVIRONMENT</span><button class="icon-btn" title="Notifications">♧</button><div class="top-avatar">V</div></div>
+      </header>
+
+      <section class="page active" id="page-dashboard">
+        <div class="page-heading"><div><div class="eyebrow">OVERVIEW</div><h1>Infrastructure Dashboard</h1><p>Monitor your network, services and AI operations from one workspace.</p></div><button class="btn btn-primary" onclick="toast('Dashboard refresh requested')">↻ Refresh data</button></div>
+        <div class="notice"><span class="notice-icon">ⓘ</span><div><b>Frontend preview is active</b><p>Live monitoring and AI agent connections will be configured in the next development phase.</p></div><span class="preview-tag">PREVIEW</span></div>
+        <div class="stat-grid">
+          <article class="stat-card"><div class="stat-top"><span>ISP CONNECTIONS</span><span class="stat-symbol blue">⌁</span></div><div class="stat-value">2 <small>/ 2</small></div><div class="stat-foot"><span class="muted-dot"></span>Configured links <b>ACT · Airtel</b></div></article>
+          <article class="stat-card"><div class="stat-top"><span>NETWORK DEVICES</span><span class="stat-symbol violet">▣</span></div><div class="stat-value">—</div><div class="stat-foot">Awaiting device discovery</div></article>
+          <article class="stat-card"><div class="stat-top"><span>ACTIVE ALERTS</span><span class="stat-symbol orange">◉</span></div><div class="stat-value">03</div><div class="stat-foot"><span class="status-dot warning"></span>Sample preview data</div></article>
+          <article class="stat-card"><div class="stat-top"><span>AI AGENTS</span><span class="stat-symbol green">✳</span></div><div class="stat-value">00 <small>active</small></div><div class="stat-foot">Open-source agents planned</div></article>
+        </div>
+        <div class="content-grid">
+          <article class="panel"><div class="panel-head"><div><h2>ISP Link Overview</h2><p>Configured internet connections</p></div><button class="text-btn" data-go="isp">View details →</button></div>
+            <div class="isp-row"><div class="isp-logo act">A</div><div class="isp-info"><b>ACT Enterprise</b><small>Primary ISP · Ultrafast Plus 6M+1</small></div><span class="pill neutral">Not connected</span></div>
+            <div class="isp-row"><div class="isp-logo airtel">a</div><div class="isp-info"><b>Airtel Leased Line</b><small>Secondary ISP · /23 subnet</small></div><span class="pill neutral">Not connected</span></div>
+            <div class="panel-foot">Status will appear after the monitoring service is connected.</div>
+          </article>
+          <article class="panel"><div class="panel-head"><div><h2>Recent Activity</h2><p>Workspace events</p></div><button class="text-btn" data-go="logs">All logs →</button></div>
+            <div class="activity"><span class="activity-icon blue-bg">✳</span><div><b>RBALOP workspace initialized</b><small>Frontend interface loaded</small></div><time>Now</time></div>
+            <div class="activity"><span class="activity-icon purple-bg">⌁</span><div><b>ISP configuration section ready</b><small>ACT and Airtel placeholders added</small></div><time>Now</time></div>
+            <div class="activity"><span class="activity-icon orange-bg">⚙</span><div><b>Agent integration pending</b><small>Backend connection not configured</small></div><time>—</time></div>
+          </article>
+        </div>
+        <article class="panel roadmap"><div class="panel-head"><div><h2>Build roadmap</h2><p>Planned development stages</p></div><span class="pill blue-pill">PHASE 1 OF 4</span></div><div class="steps"><div class="step done"><span>✓</span><b>Frontend shell</b><small>Navigation and pages</small></div><div class="step current"><span>2</span><b>Monitoring backend</b><small>ISP checks and telemetry</small></div><div class="step"><span>3</span><b>Open-source AI agents</b><small>Agent runtime and tools</small></div><div class="step"><span>4</span><b>Deployment</b><small>Windows installer/service</small></div></div></article>
+      </section>
+
+      <section class="page" id="page-isp">
+        <div class="page-heading"><div><div class="eyebrow">MONITORING</div><h1>ISP Monitoring</h1><p>Manage WAN links, health checks and failover policy.</p></div><button class="btn btn-primary" onclick="toast('ISP configuration form will be connected to the backend in Phase 2')">＋ Add ISP</button></div>
+        <div class="notice"><span class="notice-icon">ⓘ</span><div><b>Monitoring is not connected yet</b><p>These are configuration placeholders. No ping, DNS, latency or packet-loss tests are running in this preview.</p></div></div>
+        <div class="stat-grid three"><article class="stat-card"><div class="stat-top"><span>WAN MODE</span></div><div class="stat-value text-value">Failover</div><div class="stat-foot">Primary / secondary</div></article><article class="stat-card"><div class="stat-top"><span>LINKS CONFIGURED</span></div><div class="stat-value">02</div><div class="stat-foot">ACT and Airtel</div></article><article class="stat-card"><div class="stat-top"><span>LAST HEALTH CHECK</span></div><div class="stat-value text-value">—</div><div class="stat-foot">Backend not connected</div></article></div>
+        <article class="panel"><div class="panel-head"><div><h2>WAN Connections</h2><p>Review your ISP configuration</p></div><span class="pill neutral">Preview data</span></div><div class="table-wrap"><table><thead><tr><th>PROVIDER</th><th>ROLE</th><th>PLAN / NETWORK</th><th>HEALTH</th><th>ACTION</th></tr></thead><tbody><tr><td><b><span class="table-logo act">A</span> ACT Enterprise</b></td><td>Primary</td><td>Ultrafast Plus 6M+1</td><td><span class="pill neutral">Not tested</span></td><td><button class="small-btn" onclick="toast('ACT details editor planned')">Configure</button></td></tr><tr><td><b><span class="table-logo airtel">a</span> Airtel</b></td><td>Secondary</td><td>Leased line · 255.255.254.0 (/23)</td><td><span class="pill neutral">Not tested</span></td><td><button class="small-btn" onclick="toast('Airtel details editor planned')">Configure</button></td></tr></tbody></table></div></article>
+        <article class="panel"><div class="panel-head"><div><h2>Health check policy</h2><p>Planned monitoring parameters</p></div></div><div class="config-grid"><div><label>Ping target</label><input value="1.1.1.1" disabled></div><div><label>Secondary target</label><input value="8.8.8.8" disabled></div><div><label>Check interval</label><input value="30 seconds" disabled></div><div><label>Failure threshold</label><input value="3 consecutive failures" disabled></div></div></article>
+      </section>
+
+      <section class="page" id="page-devices"><div class="page-heading"><div><div class="eyebrow">MONITORING</div><h1>Devices & Network</h1><p>Discover and organize firewalls, switches, access points and servers.</p></div><button class="btn btn-primary" onclick="toast('Device discovery will be enabled with the monitoring service')">＋ Discover devices</button></div><div class="empty-state"><div class="empty-icon">▣</div><h2>No devices discovered</h2><p>Connect the RBALOP monitoring service to scan your authorized network and populate this inventory.</p><button class="btn btn-secondary" onclick="toast('Device discovery setup is planned for Phase 2')">Setup discovery</button></div></section>
+      <section class="page" id="page-alerts"><div class="page-heading"><div><div class="eyebrow">MONITORING</div><h1>Alerts & Incidents</h1><p>Review service interruptions and operational warnings.</p></div><button class="btn btn-secondary" onclick="toast('Alert rules will be configurable after backend integration')">Alert rules</button></div><article class="panel"><div class="panel-head"><div><h2>Alert centre</h2><p>Illustrative items only — not live incidents</p></div><span class="pill warning-pill">3 sample items</span></div><div class="alert-item"><span class="alert-mark">!</span><div><b>ISP health monitoring not configured</b><p>Connect monitoring backend to start checking ACT and Airtel.</p></div><small>Setup</small></div><div class="alert-item"><span class="alert-mark">!</span><div><b>Device discovery pending</b><p>No network inventory has been collected yet.</p></div><small>Setup</small></div><div class="alert-item"><span class="alert-mark">i</span><div><b>AI agents not installed</b><p>Agent deployment will be added in a later phase.</p></div><small>Info</small></div></article></section>
+      <section class="page" id="page-logs"><div class="page-heading"><div><div class="eyebrow">MONITORING</div><h1>System Logs</h1><p>Audit events, agent output and monitoring history.</p></div><button class="btn btn-secondary" onclick="toast('Log export becomes available after backend integration')">↓ Export logs</button></div><article class="panel"><div class="panel-head"><div><h2>Workspace events</h2><p>Local frontend session</p></div><span class="pill neutral">3 entries</span></div><div class="log-line"><time>SESSION</time><span class="log-level info">INFO</span><span>RBALOP frontend initialized.</span></div><div class="log-line"><time>CONFIG</time><span class="log-level info">INFO</span><span>ISP profile placeholders loaded: ACT, Airtel.</span></div><div class="log-line"><time>AGENTS</time><span class="log-level pending">PENDING</span><span>AI agent runtime not connected.</span></div></article></section>
+      <section class="page" id="page-agents"><div class="page-heading"><div><div class="eyebrow">INTELLIGENCE</div><h1>AI Agents</h1><p>Install and manage open-source agents for infrastructure operations.</p></div><button class="btn btn-primary" onclick="toast('Agent catalogue will be added in Phase 3')">＋ Add agent</button></div><div class="agent-grid"><article class="agent-card"><div class="agent-symbol blue">⌁</div><span class="pill planned">PLANNED</span><h2>ISP Health Agent</h2><p>Checks reachability, latency, jitter, packet loss and DNS resolution for each WAN link.</p><div class="agent-meta"><span>Network monitoring</span><span>Open-source runtime</span></div></article><article class="agent-card"><div class="agent-symbol violet">▣</div><span class="pill planned">PLANNED</span><h2>Network Discovery Agent</h2><p>Discovers authorized devices and collects inventory using safe network protocols.</p><div class="agent-meta"><span>Asset inventory</span><span>Open-source tools</span></div></article><article class="agent-card"><div class="agent-symbol green">✳</div><span class="pill planned">PLANNED</span><h2>AI Operations Assistant</h2><p>Explains incidents, summarizes logs and recommends operator-approved actions.</p><div class="agent-meta"><span>Local AI</span><span>Human approval</span></div></article></div><div class="notice"><span class="notice-icon">ⓘ</span><div><b>Agent safety model</b><p>Agents will begin in read-only mode. Firewall changes, failover actions and other impactful operations will require explicit administrator approval.</p></div></div></section>
+      <section class="page" id="page-automation"><div class="page-heading"><div><div class="eyebrow">INTELLIGENCE</div><h1>Automation</h1><p>Build approved workflows for recurring infrastructure tasks.</p></div><button class="btn btn-primary" onclick="toast('Workflow builder planned')">＋ New workflow</button></div><div class="empty-state"><div class="empty-icon">⌘</div><h2>No workflows created</h2><p>Automation will be connected after the monitoring and agent services are implemented.</p></div></section>
+      <section class="page" id="page-settings"><div class="page-heading"><div><div class="eyebrow">ADMINISTRATION</div><h1>Settings</h1><p>Configure your RBALOP workspace and local deployment.</p></div></div><article class="panel settings-panel"><h2>Workspace</h2><div class="setting-row"><div><b>Workspace name</b><small>Displayed across the application</small></div><input value="RBALOP" disabled></div><div class="setting-row"><div><b>Deployment mode</b><small>Initial application target</small></div><input value="Windows local application" disabled></div><div class="setting-row"><div><b>Data storage</b><small>Will be configured with backend</small></div><input value="Local database — planned" disabled></div><h2 class="settings-subhead">Security</h2><div class="setting-row"><div><b>Agent execution permissions</b><small>Administrator approval for impactful actions</small></div><span class="pill blue-pill">Approval required</span></div><div class="setting-row"><div><b>Authentication</b><small>Local administrator sign-in</small></div><span class="pill neutral">Planned</span></div></article></section>
+      <footer>RBALOP Infrastructure AI <span>•</span> Frontend preview v0.1 <span>•</span> Local-first architecture</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
